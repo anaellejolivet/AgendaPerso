@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RepetitiveEvent.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Agenda - Enoncé</a> &gt; <a href="index.source.html" class="el_package">agenda</a> &gt; <span class="el_source">RepetitiveEvent.java</span></div><h1>RepetitiveEvent.java</h1><pre class="source lang-java linenums">package agenda;
+
+import java.util.*;
+import java.time.*;
+import java.time.temporal.ChronoUnit;
+
+/**
+ * Description : A repetitive Event
+ */
+public class RepetitiveEvent extends Event {
+
+    private ChronoUnit frequency;
+<span class="fc" id="L13">    private ArrayList&lt;LocalDate&gt; lesExceptions = new ArrayList&lt;&gt;();</span>
+
+    /**
+     * Constructs a repetitive event
+     *
+     * @param title     the title of this event
+     * @param start     the start of this event
+     * @param duration  myDuration in seconds
+     * @param frequency one of :
+     *                  &lt;UL&gt;
+     *                  &lt;LI&gt;ChronoUnit.DAYS for daily repetitions&lt;/LI&gt;
+     *                  &lt;LI&gt;ChronoUnit.WEEKS for weekly repetitions&lt;/LI&gt;
+     *                  &lt;LI&gt;ChronoUnit.MONTHS for monthly repetitions&lt;/LI&gt;
+     *                  &lt;/UL&gt;
+     */
+    public RepetitiveEvent(String title, LocalDateTime start, Duration duration, ChronoUnit frequency) {
+<span class="fc" id="L29">        super(title, start, duration);</span>
+<span class="fc" id="L30">        this.frequency = frequency;</span>
+<span class="fc" id="L31">    }</span>
+
+    /**
+     * Adds an exception to the occurrence of this repetitive event
+     *
+     * @param date the event will not occur at this date
+     */
+    public void addException(LocalDate date) {
+<span class="fc" id="L39">        lesExceptions.add(date);</span>
+<span class="fc" id="L40">    }</span>
+
+    public boolean isInDay(LocalDate aDay) {
+<span class="fc" id="L43">        LocalDate theEnd = this.getStart().plus(myDuration).toLocalDate();</span>
+<span class="fc bfc" id="L44" title="All 2 branches covered.">        if (aDay.isBefore(myStart.toLocalDate()))</span>
+<span class="fc" id="L45">            return false;</span>
+
+<span class="fc bfc" id="L47" title="All 2 branches covered.">        if (lesExceptions.contains(aDay))</span>
+<span class="fc" id="L48">            return false;</span>
+
+<span class="fc" id="L50">        boolean isInDay = false;</span>
+<span class="pc bpc" id="L51" title="2 of 4 branches missed.">        switch (frequency) {</span>
+            case DAYS:
+<span class="fc" id="L53">                isInDay = true;</span>
+<span class="fc" id="L54">                break;</span>
+            case WEEKS:
+<span class="fc" id="L56">                int startDayOfWeek = myStart.getDayOfWeek().getValue();</span>
+<span class="fc" id="L57">                int theEndDayOfWeek = theEnd.getDayOfWeek().getValue();</span>
+<span class="pc bpc" id="L58" title="1 of 2 branches missed.">                if (theEndDayOfWeek &lt; startDayOfWeek)</span>
+<span class="fc" id="L59">                    theEndDayOfWeek += 7;</span>
+<span class="fc" id="L60">                int aDayOfWeek = aDay.getDayOfWeek().getValue();</span>
+<span class="pc bpc" id="L61" title="2 of 4 branches missed.">                if (startDayOfWeek &lt;= aDayOfWeek &amp;&amp; theEndDayOfWeek &gt;= aDayOfWeek)</span>
+<span class="fc" id="L62">                    isInDay = true;</span>
+                else
+<span class="nc" id="L64">                    isInDay = false;</span>
+<span class="nc" id="L65">                break;</span>
+            case MONTHS:
+<span class="nc" id="L67">                int startDayOfMonth = myStart.getDayOfMonth();</span>
+<span class="nc" id="L68">                int theEndDayOfMonth = theEnd.getDayOfMonth();</span>
+<span class="nc bnc" id="L69" title="All 2 branches missed.">                if (theEndDayOfMonth &lt; startDayOfMonth)</span>
+<span class="nc" id="L70">                    theEndDayOfMonth += 31;</span>
+<span class="nc" id="L71">                int aDayOfMonth = aDay.getDayOfMonth();</span>
+<span class="nc bnc" id="L72" title="All 4 branches missed.">                if (startDayOfMonth &lt;= aDayOfMonth &amp;&amp; theEndDayOfMonth &gt;= aDayOfMonth)</span>
+<span class="nc" id="L73">                    isInDay = true;</span>
+                else
+<span class="nc" id="L75">                    isInDay = false;</span>
+<span class="nc" id="L76">                break;</span>
+            default:
+<span class="nc" id="L78">                isInDay = false;</span>
+
+        }
+<span class="fc" id="L81">        return isInDay;</span>
+    }
+
+    /**
+     *
+     * @return the type of repetition
+     */
+    public ChronoUnit getFrequency() {
+<span class="nc" id="L89">        return frequency;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

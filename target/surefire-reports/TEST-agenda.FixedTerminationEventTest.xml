@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="agenda.FixedTerminationEventTest" time="0.005" tests="6" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="14"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/anaellejolivet/NetBeansProjects/Agenda/tp-agenda/target/test-classes:/Users/anaellejolivet/NetBeansProjects/Agenda/tp-agenda/target/classes:/Users/anaellejolivet/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.0/junit-jupiter-api-5.7.0.jar:/Users/anaellejolivet/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/anaellejolivet/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/anaellejolivet/.m2/repository/org/junit/platform/junit-platform-commons/1.7.0/junit-platform-commons-1.7.0.jar:/Users/anaellejolivet/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.7.0/junit-jupiter-engine-5.7.0.jar:/Users/anaellejolivet/.m2/repository/org/junit/platform/junit-platform-engine/1.7.0/junit-platform-engine-1.7.0.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="14"/>
+    <property name="user.country" value="FR"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-14.0.2.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/anaellejolivet/NetBeansProjects/Agenda/tp-agenda/target/surefire/surefirebooter3566191614869089314.jar /Users/anaellejolivet/NetBeansProjects/Agenda/tp-agenda/target/surefire 2021-12-13T16-25-54_316-jvmRun1 surefire14220526310774985672tmp surefire_015055442160905550792tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/anaellejolivet/NetBeansProjects/Agenda/tp-agenda/target/test-classes:/Users/anaellejolivet/NetBeansProjects/Agenda/tp-agenda/target/classes:/Users/anaellejolivet/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.0/junit-jupiter-api-5.7.0.jar:/Users/anaellejolivet/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/anaellejolivet/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/anaellejolivet/.m2/repository/org/junit/platform/junit-platform-commons/1.7.0/junit-platform-commons-1.7.0.jar:/Users/anaellejolivet/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.7.0/junit-jupiter-engine-5.7.0.jar:/Users/anaellejolivet/.m2/repository/org/junit/platform/junit-platform-engine/1.7.0/junit-platform-engine-1.7.0.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/anaellejolivet"/>
+    <property name="user.language" value="fr"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2020-07-14"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-14.0.2.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/anaellejolivet/NetBeansProjects/Agenda/tp-agenda"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="surefire.real.class.path" value="/Users/anaellejolivet/NetBeansProjects/Agenda/tp-agenda/target/surefire/surefirebooter3566191614869089314.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="14.0.2+12-46"/>
+    <property name="user.name" value="anaellejolivet"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="10.16"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="maven.ext.class.path" value="/Applications/NetBeans/Apache NetBeans 12.2.app/Contents/Resources/NetBeans/netbeans/java/maven-nblib/netbeans-eventspy.jar"/>
+    <property name="localRepository" value="/Users/anaellejolivet/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/w_/bqmq_6m1555gjd4cljgf7ppc0000gn/T/"/>
+    <property name="java.version" value="14.0.2"/>
+    <property name="user.dir" value="/Users/anaellejolivet/NetBeansProjects/Agenda/tp-agenda"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.library.path" value="/Users/anaellejolivet/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="14.0.2+12-46"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="58.0"/>
+  </properties>
+  <testcase name="eventIsNotInExceptionDays" classname="agenda.FixedTerminationEventTest" time="0"/>
+  <testcase name="eventOccurs10WeeksAfter" classname="agenda.FixedTerminationEventTest" time="0"/>
+  <testcase name="canCalculateTerminationDateFromNumberOfOccurrences" classname="agenda.FixedTerminationEventTest" time="0.001"/>
+  <testcase name="canCalculateNumberOfOccurrencesFromTerminationDate" classname="agenda.FixedTerminationEventTest" time="0"/>
+  <testcase name="eventIsNotInDayBefore" classname="agenda.FixedTerminationEventTest" time="0"/>
+  <testcase name="eventIsInItsStartDay" classname="agenda.FixedTerminationEventTest" time="0"/>
+</testsuite>
